@@ -11,6 +11,7 @@
 		43250F4B1E96D69900CB2A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F491E96D69900CB2A89 /* Main.storyboard */; };
 		43250F4D1E96D69900CB2A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4C1E96D69900CB2A89 /* Assets.xcassets */; };
 		43250F501E96D69900CB2A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4E1E96D69900CB2A89 /* LaunchScreen.storyboard */; };
+		B60801CBAD38F61D99EFD7E0 /* Pods_OpenSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		43250F4C1E96D69900CB2A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43250F4F1E96D69900CB2A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43250F511E96D69900CB2A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8D187E63BB8A66665C7196 /* Pods-OpenSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E79885BEE925B31A3BD26730 /* Pods-OpenSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60801CBAD38F61D99EFD7E0 /* Pods_OpenSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012FE55A5D8FC3D2581013E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43250F391E96D69900CB2A89 = {
 			isa = PBXGroup;
 			children = (
 				43250F441E96D69900CB2A89 /* OpenSwift */,
 				43250F431E96D69900CB2A89 /* Products */,
+				709FE85F5B5B5A531911A0D0 /* Pods */,
+				012FE55A5D8FC3D2581013E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +76,15 @@
 			path = OpenSwift;
 			sourceTree = "<group>";
 		};
+		709FE85F5B5B5A531911A0D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F8D187E63BB8A66665C7196 /* Pods-OpenSwift.debug.xcconfig */,
+				E79885BEE925B31A3BD26730 /* Pods-OpenSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43250F541E96D69900CB2A89 /* Build configuration list for PBXNativeTarget "OpenSwift" */;
 			buildPhases = (
+				285897A283676B6AA62BB241 /* [CP] Check Pods Manifest.lock */,
 				43250F3E1E96D69900CB2A89 /* Sources */,
 				43250F3F1E96D69900CB2A89 /* Frameworks */,
 				43250F401E96D69900CB2A89 /* Resources */,
+				30FB4C6415C85E6C7BB1CCB2 /* [CP] Embed Pods Frameworks */,
+				41611D4924DFE5E9F120475A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		285897A283676B6AA62BB241 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		30FB4C6415C85E6C7BB1CCB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41611D4924DFE5E9F120475A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43250F3E1E96D69900CB2A89 /* Sources */ = {
@@ -255,6 +330,7 @@
 		};
 		43250F551E96D69900CB2A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8D187E63BB8A66665C7196 /* Pods-OpenSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DM75P97468;
@@ -268,6 +344,7 @@
 		};
 		43250F561E96D69900CB2A89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79885BEE925B31A3BD26730 /* Pods-OpenSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DM75P97468;
@@ -298,6 +375,7 @@
 				43250F561E96D69900CB2A89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
