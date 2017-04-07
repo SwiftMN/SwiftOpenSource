@@ -9,4 +9,7 @@ target 'OpenSwift' do
 
   # Pod for OAuth with various services such as Spotify
   pod 'OAuthSwift', '~> 1.1.0'
+
+  # Pod to process yaml files for API configuration
+  pod 'Yaml'
 end

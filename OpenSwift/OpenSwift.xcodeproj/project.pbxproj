@@ -11,6 +11,8 @@
 		43250F4B1E96D69900CB2A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F491E96D69900CB2A89 /* Main.storyboard */; };
 		43250F4D1E96D69900CB2A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4C1E96D69900CB2A89 /* Assets.xcassets */; };
 		43250F501E96D69900CB2A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4E1E96D69900CB2A89 /* LaunchScreen.storyboard */; };
+		43FE10B91E97143400386DFE /* secrets.yml in Resources */ = {isa = PBXBuildFile; fileRef = 43FE10B81E97143400386DFE /* secrets.yml */; };
+		43FE10BB1E97158000386DFE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BA1E97158000386DFE /* Log.swift */; };
 		B60801CBAD38F61D99EFD7E0 /* Pods_OpenSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +23,8 @@
 		43250F4C1E96D69900CB2A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43250F4F1E96D69900CB2A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43250F511E96D69900CB2A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43FE10B81E97143400386DFE /* secrets.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.yml; sourceTree = "<group>"; };
+		43FE10BA1E97158000386DFE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8D187E63BB8A66665C7196 /* Pods-OpenSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E79885BEE925B31A3BD26730 /* Pods-OpenSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				43250F4C1E96D69900CB2A89 /* Assets.xcassets */,
 				43250F4E1E96D69900CB2A89 /* LaunchScreen.storyboard */,
 				43250F511E96D69900CB2A89 /* Info.plist */,
+				43FE10B81E97143400386DFE /* secrets.yml */,
+				43FE10BA1E97158000386DFE /* Log.swift */,
 			);
 			path = OpenSwift;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FE10B91E97143400386DFE /* secrets.yml in Resources */,
 				43250F501E96D69900CB2A89 /* LaunchScreen.storyboard in Resources */,
 				43250F4D1E96D69900CB2A89 /* Assets.xcassets in Resources */,
 				43250F4B1E96D69900CB2A89 /* Main.storyboard in Resources */,
@@ -209,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FE10BB1E97158000386DFE /* Log.swift in Sources */,
 				43250F461E96D69900CB2A89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Yaml
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+
+    do {
+      if let file = Bundle.main.path(forResource: "secrets", ofType: "yml") {
+        let fileContents = try String(contentsOfFile: file)
+        let secrets = try Yaml.load(fileContents)
+        let spotifyClientId = secrets["development"]["spotify_client_id"].string!
+        let spotifyClientSecret = secrets["development"]["spotify_client_secret"].string!
+        🐛("Spotify Client ID = \(spotifyClientId)")
+        🐛("Spotify Client Secret = \(spotifyClientSecret)")
+      }
+    } catch let error {
+      💩(error.localizedDescription)
+    }
+
     return true
   }
 
