@@ -5,11 +5,22 @@ target 'OpenSwift' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for OpenSwift
-
   # Pod for OAuth with various services such as Spotify
   pod 'OAuthSwift', '~> 1.1.0'
 
   # Pod to process yaml files for API configuration
   pod 'Yaml'
+
+  # Networking layer
+  pod 'Alamofire', '~> 4.4'
+
+  # Mobile Database
+  pod 'RealmSwift'
+
+  # Converting Models between JSON
+  pod 'ObjectMapper'
+
+  # RxSwift for Async 
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

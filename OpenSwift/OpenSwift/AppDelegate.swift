@@ -8,27 +8,20 @@
 
 import UIKit
 import Yaml
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    return true
+  }
 
-
-    do {
-      if let file = Bundle.main.path(forResource: "secrets", ofType: "yml") {
-        let fileContents = try String(contentsOfFile: file)
-        let secrets = try Yaml.load(fileContents)
-        let spotifyClientId = secrets["development"]["spotify_client_id"].string!
-        let spotifyClientSecret = secrets["development"]["spotify_client_secret"].string!
-        🐛("Spotify Client ID = \(spotifyClientId)")
-        🐛("Spotify Client Secret = \(spotifyClientSecret)")
-      }
-    } catch let error {
-      💩(error.localizedDescription)
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    if (url.host == "oauth-callback") {
+      OAuthSwift.handle(url: url)
     }
 
     return true
