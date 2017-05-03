@@ -11,7 +11,14 @@
 		43250F4B1E96D69900CB2A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F491E96D69900CB2A89 /* Main.storyboard */; };
 		43250F4D1E96D69900CB2A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4C1E96D69900CB2A89 /* Assets.xcassets */; };
 		43250F501E96D69900CB2A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43250F4E1E96D69900CB2A89 /* LaunchScreen.storyboard */; };
+		4326E8E41EB8DC9D0071D2D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326E8E31EB8DC9D0071D2D5 /* Extensions.swift */; };
+		4326E8E61EB8DCF90071D2D5 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326E8E51EB8DCF90071D2D5 /* SpotifyService.swift */; };
+		4326E8E81EB8DD560071D2D5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326E8E71EB8DD560071D2D5 /* API.swift */; };
 		433AEA281E9C527E009C4904 /* SpotifyAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AEA271E9C527E009C4904 /* SpotifyAccess.swift */; };
+		4391EC981E9DC44C00CBF8C0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391EC971E9DC44C00CBF8C0 /* Artist.swift */; };
+		4391EC9A1E9DC51600CBF8C0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391EC991E9DC51600CBF8C0 /* Image.swift */; };
+		43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18DE1EB9149100ABA0AA /* Authorize.swift */; };
+		43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */; };
 		43FE10B91E97143400386DFE /* secrets.yml in Resources */ = {isa = PBXBuildFile; fileRef = 43FE10B81E97143400386DFE /* secrets.yml */; };
 		43FE10BB1E97158000386DFE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BA1E97158000386DFE /* Log.swift */; };
 		43FE10BD1E97210200386DFE /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BC1E97210200386DFE /* Spotify.swift */; };
@@ -26,7 +33,14 @@
 		43250F4C1E96D69900CB2A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43250F4F1E96D69900CB2A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43250F511E96D69900CB2A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4326E8E31EB8DC9D0071D2D5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4326E8E51EB8DCF90071D2D5 /* SpotifyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
+		4326E8E71EB8DD560071D2D5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		433AEA271E9C527E009C4904 /* SpotifyAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAccess.swift; sourceTree = "<group>"; };
+		4391EC971E9DC44C00CBF8C0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		4391EC991E9DC51600CBF8C0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		43FD18DE1EB9149100ABA0AA /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorize.swift; sourceTree = "<group>"; };
+		43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		43FE10B81E97143400386DFE /* secrets.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.yml; sourceTree = "<group>"; };
 		43FE10BA1E97158000386DFE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		43FE10BC1E97210200386DFE /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
@@ -77,18 +91,81 @@
 		43250F441E96D69900CB2A89 /* OpenSwift */ = {
 			isa = PBXGroup;
 			children = (
+				43FD18DD1EB9147D00ABA0AA /* Random */,
+				4326E8E21EB8DC600071D2D5 /* API */,
+				4326E8E01EB8D9720071D2D5 /* ViewModels */,
+				4326E8DF1EB8D96A0071D2D5 /* ViewControllers */,
+				4326E8DE1EB8D9650071D2D5 /* Services */,
+				4326E8DD1EB8D95E0071D2D5 /* Models */,
+				4326E8E11EB8DC4D0071D2D5 /* Stuff */,
+				43FE10B81E97143400386DFE /* secrets.yml */,
+				43FE10BA1E97158000386DFE /* Log.swift */,
+				43FE10BC1E97210200386DFE /* Spotify.swift */,
+				4326E8E31EB8DC9D0071D2D5 /* Extensions.swift */,
+			);
+			path = OpenSwift;
+			sourceTree = "<group>";
+		};
+		4326E8DD1EB8D95E0071D2D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				433AEA271E9C527E009C4904 /* SpotifyAccess.swift */,
+				4391EC971E9DC44C00CBF8C0 /* Artist.swift */,
+				4391EC991E9DC51600CBF8C0 /* Image.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4326E8DE1EB8D9650071D2D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4326E8E51EB8DCF90071D2D5 /* SpotifyService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4326E8DF1EB8D96A0071D2D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43FE10BE1E9C257500386DFE /* LandingViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4326E8E01EB8D9720071D2D5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		4326E8E11EB8DC4D0071D2D5 /* Stuff */ = {
+			isa = PBXGroup;
+			children = (
 				43250F451E96D69900CB2A89 /* AppDelegate.swift */,
 				43250F491E96D69900CB2A89 /* Main.storyboard */,
 				43250F4C1E96D69900CB2A89 /* Assets.xcassets */,
 				43250F4E1E96D69900CB2A89 /* LaunchScreen.storyboard */,
 				43250F511E96D69900CB2A89 /* Info.plist */,
-				43FE10B81E97143400386DFE /* secrets.yml */,
-				43FE10BA1E97158000386DFE /* Log.swift */,
-				43FE10BC1E97210200386DFE /* Spotify.swift */,
-				43FE10BE1E9C257500386DFE /* LandingViewController.swift */,
-				433AEA271E9C527E009C4904 /* SpotifyAccess.swift */,
 			);
-			path = OpenSwift;
+			name = Stuff;
+			sourceTree = "<group>";
+		};
+		4326E8E21EB8DC600071D2D5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4326E8E71EB8DD560071D2D5 /* API.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		43FD18DD1EB9147D00ABA0AA /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				43FD18DE1EB9149100ABA0AA /* Authorize.swift */,
+			);
+			name = Random;
 			sourceTree = "<group>";
 		};
 		709FE85F5B5B5A531911A0D0 /* Pods */ = {
@@ -225,10 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4391EC9A1E9DC51600CBF8C0 /* Image.swift in Sources */,
+				4391EC981E9DC44C00CBF8C0 /* Artist.swift in Sources */,
 				433AEA281E9C527E009C4904 /* SpotifyAccess.swift in Sources */,
+				4326E8E41EB8DC9D0071D2D5 /* Extensions.swift in Sources */,
+				4326E8E81EB8DD560071D2D5 /* API.swift in Sources */,
 				43FE10BD1E97210200386DFE /* Spotify.swift in Sources */,
 				43FE10BB1E97158000386DFE /* Log.swift in Sources */,
 				43FE10BF1E9C257500386DFE /* LandingViewController.swift in Sources */,
+				4326E8E61EB8DCF90071D2D5 /* SpotifyService.swift in Sources */,
+				43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */,
+				43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */,
 				43250F461E96D69900CB2A89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

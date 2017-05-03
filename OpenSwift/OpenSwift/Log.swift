@@ -21,7 +21,9 @@ enum LogLevel {
     }
   }
 }
+
 extension LogLevel: Comparable {}
+
 func ==(lhs: LogLevel, rhs: LogLevel) -> Bool {
   return lhs.intValue == rhs.intValue
 }

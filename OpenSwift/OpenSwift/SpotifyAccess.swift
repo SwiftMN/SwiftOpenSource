@@ -7,47 +7,40 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-struct SpotifyAccess: Mappable {
+final class SpotifyAccess: Object, Mappable {
 
-  var expires: Double!
-  var refreshToken: String!
-  var scopes: [String]!
-  var tokenType: String!
-  var accessToken: String!
+  dynamic var expires: Date!
+  dynamic var refreshToken: String!
+  dynamic var tokenType: String!
+  dynamic var accessToken: String!
 
   var authorizationHeader: String {
     return "\(tokenType!) \(accessToken!)"
   }
 
-  init?(map: Map) {
-
+  required convenience init?(map: Map) {
+    self.init()
   }
 
-  mutating func mapping(map: Map) {
-    expires         <- map["expires_in"]
+  func mapping(map: Map) {
+    let transform = transformer()
+    expires         <- (map["expires_in"], transform)
     refreshToken    <- map["refresh_token"]
     tokenType       <- map["token_type"]
     accessToken     <- map["access_token"]
+  }
 
-    // Transform a single spaced list of strings into a [String]
-    // and reverse back
-    let transformer = TransformOf<[String],String>(fromJSON: { string in
-      guard let scope = string else { return nil }
-      return scope.components(separatedBy: " ")
-    }) { array in
-      guard let scopes = array else { return nil }
-      let scope = scopes.reduce("") { previous, next in
-        if previous.characters.count == 0 {
-          return next
-        }
-
-        return previous + " \(next)"
-      }
-
-      return scope
+  private func transformer() -> TransformOf<Date, Double> {
+    let transform = TransformOf<Date, Double>(fromJSON: { value -> Date? in
+      guard let seconds = value, let total = Int(exactly: seconds) else { return nil }
+      return Calendar.current.date(byAdding: .second, value: total, to: Date())
+    }) { date -> Double? in
+      guard let date = date else { return nil }
+      return abs(date.timeIntervalSinceNow)
     }
 
-    scopes           <- (map["scope"], transformer)
+    return transform
   }
 }

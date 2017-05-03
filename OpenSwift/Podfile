@@ -19,8 +19,9 @@ target 'OpenSwift' do
 
   # Converting Models between JSON
   pod 'ObjectMapper'
+  pod 'ObjectMapper+Realm'
 
-  # RxSwift for Async 
+  # RxSwift for Async
   pod 'RxSwift'
   pod 'RxCocoa'
 end
