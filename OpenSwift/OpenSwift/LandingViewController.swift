@@ -10,15 +10,32 @@ import UIKit
 import Yaml
 import OAuthSwift
 import Alamofire
+import RxSwift
 
 final class LandingViewController: UIViewController {
 
   // ViewModel
   private let viewModel = LandingViewModel()
 
+  private let disposableBag = DisposeBag()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    bindings()
+  }
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
     Authorize.shared.authorize(from: self)
+  }
+
+  private func bindings() {
+    viewModel.topArtists.asObservable()
+      .subscribe(onNext: { artists in
+        
+      })
+      .addDisposableTo(disposableBag)
   }
 }

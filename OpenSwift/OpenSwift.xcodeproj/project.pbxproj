@@ -21,7 +21,6 @@
 		43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */; };
 		43FE10B91E97143400386DFE /* secrets.yml in Resources */ = {isa = PBXBuildFile; fileRef = 43FE10B81E97143400386DFE /* secrets.yml */; };
 		43FE10BB1E97158000386DFE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BA1E97158000386DFE /* Log.swift */; };
-		43FE10BD1E97210200386DFE /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BC1E97210200386DFE /* Spotify.swift */; };
 		43FE10BF1E9C257500386DFE /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BE1E9C257500386DFE /* LandingViewController.swift */; };
 		B60801CBAD38F61D99EFD7E0 /* Pods_OpenSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		43FE10B81E97143400386DFE /* secrets.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.yml; sourceTree = "<group>"; };
 		43FE10BA1E97158000386DFE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		43FE10BC1E97210200386DFE /* Spotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		43FE10BE1E9C257500386DFE /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		8AB40CB2C1A02C6E7BC87DFF /* Pods_OpenSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8D187E63BB8A66665C7196 /* Pods-OpenSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				4326E8E11EB8DC4D0071D2D5 /* Stuff */,
 				43FE10B81E97143400386DFE /* secrets.yml */,
 				43FE10BA1E97158000386DFE /* Log.swift */,
-				43FE10BC1E97210200386DFE /* Spotify.swift */,
 				4326E8E31EB8DC9D0071D2D5 /* Extensions.swift */,
 			);
 			path = OpenSwift;
@@ -307,7 +304,6 @@
 				433AEA281E9C527E009C4904 /* SpotifyAccess.swift in Sources */,
 				4326E8E41EB8DC9D0071D2D5 /* Extensions.swift in Sources */,
 				4326E8E81EB8DD560071D2D5 /* API.swift in Sources */,
-				43FE10BD1E97210200386DFE /* Spotify.swift in Sources */,
 				43FE10BB1E97158000386DFE /* Log.swift in Sources */,
 				43FE10BF1E9C257500386DFE /* LandingViewController.swift in Sources */,
 				4326E8E61EB8DCF90071D2D5 /* SpotifyService.swift in Sources */,
