@@ -1,41 +1,47 @@
 PODS:
   - Alamofire (4.4.0)
   - OAuthSwift (1.1.1)
-  - ObjectMapper (2.2.5)
+  - ObjectMapper (2.2.6)
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
     - RealmSwift
-  - Realm (2.5.1):
-    - Realm/Headers (= 2.5.1)
-  - Realm/Headers (2.5.1)
-  - RealmSwift (2.5.1):
-    - Realm (= 2.5.1)
-  - RxCocoa (3.4.0):
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
+  - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
-  - RxSwift (3.4.0)
+  - RxSwift (3.4.1)
+  - SwiftyDrop (3.0.3)
+  - SwiftyJSON (3.1.4)
   - Yaml (3.3.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
-  - OAuthSwift (~> 1.1.0)
+  - Alamofire
+  - OAuthSwift
   - ObjectMapper
   - ObjectMapper+Realm
   - RealmSwift
   - RxCocoa
   - RxSwift
+  - SwiftyDrop
+  - SwiftyJSON
   - Yaml
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   OAuthSwift: 6e3a103b3e5639411769cc7e199ec7e14bd1547f
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
-  Realm: 32f86104d37c8521f864d4274050b38ba6190733
-  RealmSwift: f719e7511c902b8908593e8f143f59e47931bdb6
-  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
-  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SwiftyDrop: 785f95aabc26c4d832576bb78dc4ba7d0594a95b
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Yaml: 18b2cf7301c4132e2bbb508a6921d2637ed3046c
 
-PODFILE CHECKSUM: 701a93bd0dc639a17b7f6217585f0c1e07cd599c
+PODFILE CHECKSUM: b1cddf452e736e0eae2f1d37b84a5a587add9b3f
 
 COCOAPODS: 1.2.0

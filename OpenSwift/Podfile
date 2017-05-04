@@ -6,13 +6,13 @@ target 'OpenSwift' do
   use_frameworks!
 
   # Pod for OAuth with various services such as Spotify
-  pod 'OAuthSwift', '~> 1.1.0'
+  pod 'OAuthSwift'
 
   # Pod to process yaml files for API configuration
   pod 'Yaml'
 
   # Networking layer
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire'
 
   # Mobile Database
   pod 'RealmSwift'
@@ -20,6 +20,12 @@ target 'OpenSwift' do
   # Converting Models between JSON
   pod 'ObjectMapper'
   pod 'ObjectMapper+Realm'
+
+  # Handling JSON in a sane way
+  pod 'SwiftyJSON'
+
+  # Dropdown Alert messages
+  pod 'SwiftyDrop'
 
   # RxSwift for Async
   pod 'RxSwift'

@@ -8,6 +8,7 @@
 
 import RxSwift
 import Alamofire
+import SwiftyJSON
 
 final class API {
 
@@ -27,13 +28,27 @@ final class API {
     authorized.value = true
   }
 
-  func get(path: String, parameters: [String: Any]? = nil, headers: [String : String]? = nil) {
-    let mergedHeaders = combinedHeaders(headers: headers)
-    Alamofire.request(path, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: mergedHeaders).responseJSON { response in
-      if let JSON = response.result.value {
-        🐛("JSON: \(JSON)")
+  func get(path: String, parameters: [String: Any]? = nil, headers: [String : String]? = nil) -> Observable<JSON> {
+    return Observable.create({ [weak self] observer in
+      let mergedHeaders = self?.combinedHeaders(headers: headers)
+      Alamofire.request(path, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: mergedHeaders).responseJSON { response in
+        🐛("Request time (s): \(response.timeline.requestDuration)")
+
+        if let jsonData = response.result.value {
+          🐛("JSON: \(jsonData)")
+          let json = JSON(jsonData)
+          observer.onNext(json)
+          observer.onCompleted()
+        }
+
+        if let error = response.error {
+          💩("Error: \(error)")
+          observer.onError(error)
+        }
       }
-    }
+      
+      return Disposables.create()
+    })
   }
 
   private func combinedHeaders(headers: [String : String]?) -> [String : String] {

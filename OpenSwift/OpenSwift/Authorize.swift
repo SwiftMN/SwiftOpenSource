@@ -25,6 +25,7 @@ final class Authorize {
 
     if let access = results.first {
       // Authorized. Configure API Client
+      🐛("Already have a Spotify Access Token")
       API.client.configureHeaders(spotify: access)
     } else {
       // Get Spotify Secrete Keys
@@ -37,32 +38,19 @@ final class Authorize {
       // Configure OAuth 
       oauth = OAuth2Swift(consumerKey: spotifyClientId, consumerSecret: spotifyClientSecret, authorizeUrl: Spotify.authorize.URLString, accessTokenUrl: Spotify.token.URLString, responseType: "code")
       let handler = SafariURLHandler(viewController: from, oauthSwift: oauth)
-      handler.presentCompletion = {
-        print("Safari presented")
-      }
-
-      handler.dismissCompletion = {
-        print("Safari dismissed")
-      }
       oauth.authorizeURLHandler = handler
       let _ = oauth.authorize(withCallbackURL: "oauth-swift://oauth-callback/spotify",
                       scope: "user-library-modify user-top-read playlist-read-private user-read-birthdate",
                       state: generateState(withLength: 20),
                       success: { credential, response, parameters in
-                        🐛("Credential: \(credential)")
-                        🐛("Response: \(String(describing: response))")
                         🐛("Parameters: \(parameters)")
 
                         // Save to Realm
                         let spotifyAccess = SpotifyAccess(JSON: parameters)!
-                        🐛(spotifyAccess.accessToken)
-                        🐛(spotifyAccess.tokenType)
-                        🐛(spotifyAccess.refreshToken)
 
                         try! realm.write {
                           realm.delete(all)
                           realm.add(spotifyAccess)
-                          API.client.configureHeaders(spotify: spotifyAccess)
                         }
       },
                       failure: { error in

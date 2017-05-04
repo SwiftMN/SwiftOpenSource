@@ -97,6 +97,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxCocoa/RxCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyDrop/SwiftyDrop.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Yaml/Yaml.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -108,6 +110,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxCocoa/RxCocoa.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyDrop/SwiftyDrop.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Yaml/Yaml.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

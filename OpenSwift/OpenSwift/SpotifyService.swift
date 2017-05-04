@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
+import RxSwift
+import SwiftyDrop
 
 enum Spotify {
   case authorize
@@ -52,7 +55,16 @@ enum Spotify {
 }
 
 final class SpotifyService {
+
+  private let disposableBag = DisposeBag()
+
   func fetchTopArtists() {
-    API.client.get(path: Spotify.topArtists.URLString)
+    API.client.get(path: Spotify.topArtists.URLString).subscribe(onNext: { json in
+       🐛("JSON = \(json)")
+    }, onError: { error in
+      Drop.down(error.localizedDescription, state: .error)
+    }, onCompleted: {
+      Drop.down("Got Top Artists", state: .success)
+    }).addDisposableTo(disposableBag)
   }
 }
