@@ -108,7 +108,6 @@ final class ArtistDetailViewController: UIViewController {
        .subscribe(onNext: { data in
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         try! AVAudioSession.sharedInstance().setActive(true)
-        guard self.player.isPlaying else { return }
         self.player = try! AVAudioPlayer(data: data)
         self.player.prepareToPlay()
         self.player.play()
