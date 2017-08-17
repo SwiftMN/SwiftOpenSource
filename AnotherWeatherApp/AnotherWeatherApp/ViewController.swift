@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class ViewController: UIViewController {
   //MARK: IBOutlets
@@ -18,5 +20,18 @@ final class ViewController: UIViewController {
   @IBOutlet weak var weatherDescriptionLabel: UILabel!
   @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
   @IBOutlet weak var temperatureSegmentedControl: UISegmentedControl!
+
+  //MARK: RX
+  private let disposableBag = DisposeBag()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    bindings()
+  }
+
+  private func bindings() {
+    
+  }
 }
 
