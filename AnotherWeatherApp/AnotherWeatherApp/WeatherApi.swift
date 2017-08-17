@@ -27,7 +27,7 @@ final class WeatherApi {
       let name = json["name"].string ?? "Unknown"
       let temp = json["main"]["temp"].int ?? -1000
       let humid = json["main"]["humidity"].int  ?? 0
-      let iconCharacter = json["weather"][0]["icon"].string ?? "e"
+      let iconCharacter = json["weather"][0]["icon"].string ?? ""
       let description = json["weather"][0]["description"].string ?? ""
 
       // Return our Model

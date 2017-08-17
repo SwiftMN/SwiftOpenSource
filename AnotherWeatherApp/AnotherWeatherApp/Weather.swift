@@ -15,6 +15,14 @@ struct Weather {
   let weatherDescription: String
   let icon: String
 
+  static let empty = Weather(
+    cityName: "Unknown",
+    temperature: -1000,
+    humidity: 0,
+    weatherDescription: "unknown",
+    icon: "e"
+  )
+
   func characterIcon() -> String {
     return iconNameToChar(icon: icon)
   }

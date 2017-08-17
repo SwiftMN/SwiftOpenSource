@@ -10,6 +10,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="weather.ttf">
+            <string>Flaticon</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -50,7 +55,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ny2-UI-evh" secondAttribute="height" multiplier="2:1" id="xth-G9-5Kk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="220"/>
+                                <fontDescription key="fontDescription" name="Flaticon" family="Flaticon" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -66,20 +71,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-NG-PnL">
-                                <rect key="frame" x="169.5" y="315" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-AX-pA3">
-                                <rect key="frame" x="127.5" y="86" width="120" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="L6d-F0-h0E"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="°C"/>
-                                    <segment title="°F"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="68 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0o-ti-Pg5">
                                 <rect key="frame" x="287.5" y="106" width="67" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -92,8 +83,6 @@
                             <constraint firstAttribute="trailing" secondItem="NfB-U8-BvJ" secondAttribute="trailing" constant="8" id="02G-rl-EEL"/>
                             <constraint firstItem="NfB-U8-BvJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0BU-6I-9Gf"/>
                             <constraint firstItem="M5v-QZ-dAs" firstAttribute="trailing" secondItem="NfB-U8-BvJ" secondAttribute="trailing" id="17I-4H-8uh"/>
-                            <constraint firstItem="qYL-AX-pA3" firstAttribute="centerX" secondItem="NfB-U8-BvJ" secondAttribute="centerX" id="5Yf-hj-GCJ"/>
-                            <constraint firstItem="qYL-AX-pA3" firstAttribute="top" secondItem="NfB-U8-BvJ" secondAttribute="bottom" constant="18" id="8ET-cw-Pi3"/>
                             <constraint firstItem="NfB-U8-BvJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="BWQ-Ad-lYA"/>
                             <constraint firstAttribute="trailing" secondItem="Ny2-UI-evh" secondAttribute="trailing" constant="20" id="F18-QV-iTX"/>
                             <constraint firstItem="M5v-QZ-dAs" firstAttribute="top" secondItem="NfB-U8-BvJ" secondAttribute="bottom" constant="8" id="G33-cu-oqC"/>
@@ -101,7 +90,6 @@
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="top" secondItem="u0o-ti-Pg5" secondAttribute="bottom" constant="8" id="Jis-Ko-GUa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cr4-gf-mzR" secondAttribute="trailing" constant="8" id="L57-aG-ycB"/>
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Nls-yO-2tw"/>
-                            <constraint firstItem="yX8-NG-PnL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R9v-SY-ZT9"/>
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="top" secondItem="lqc-PM-gTF" secondAttribute="bottom" constant="8" id="Xmq-sN-KZE"/>
                             <constraint firstItem="vfY-dB-CLQ" firstAttribute="leading" secondItem="cr4-gf-mzR" secondAttribute="leading" id="Ye8-2D-tEl"/>
                             <constraint firstItem="u0o-ti-Pg5" firstAttribute="trailing" secondItem="Ny2-UI-evh" secondAttribute="trailing" id="fyJ-g4-rza"/>
@@ -112,16 +100,13 @@
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmM-wO-4M4"/>
                             <constraint firstItem="vfY-dB-CLQ" firstAttribute="trailing" secondItem="cr4-gf-mzR" secondAttribute="trailing" id="sgL-G5-3tG"/>
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="leading" secondItem="lqc-PM-gTF" secondAttribute="leading" id="u1q-tb-4kA"/>
-                            <constraint firstItem="yX8-NG-PnL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yfU-Yr-LuN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="yX8-NG-PnL" id="76L-8q-vzk"/>
                         <outlet property="cityNameLabel" destination="cr4-gf-mzR" id="5CL-vr-2MI"/>
                         <outlet property="cityNameTextField" destination="NfB-U8-BvJ" id="Hee-ll-wWx"/>
                         <outlet property="humidityLabel" destination="u0o-ti-Pg5" id="fLq-Pm-QbA"/>
                         <outlet property="temperatureLabel" destination="lqc-PM-gTF" id="YYC-Gs-Ql6"/>
-                        <outlet property="temperatureSegmentedControl" destination="qYL-AX-pA3" id="Ika-6r-TRa"/>
                         <outlet property="weatherDescriptionLabel" destination="vfY-dB-CLQ" id="om9-kS-mkG"/>
                         <outlet property="weatherIconLabel" destination="Ny2-UI-evh" id="GBK-6f-a6R"/>
                     </connections>
