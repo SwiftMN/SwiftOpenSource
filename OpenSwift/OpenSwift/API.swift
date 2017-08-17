@@ -8,6 +8,7 @@
 
 import RxSwift
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
 
 final class API {
@@ -26,6 +27,27 @@ final class API {
     headers["Accept"] = "application/json"
     headers["Authorization"] = spotify.authorizationHeader
     authorized.value = true
+  }
+
+  func download(path: String, parameters: [String: Any]? = nil, headers: [String : String]? = nil) -> Observable<UIImage> {
+    return Observable.create({ observer in
+      Alamofire.request(path).responseImage { responseImage in
+        debugPrint(responseImage)
+        debugPrint(responseImage.result)
+
+        if let error = responseImage.error {
+          observer.onError(error)
+        }
+
+        if let image = responseImage.result.value {
+          print("image downloaded: \(image)")
+          observer.onNext(image)
+        }
+
+        observer.onCompleted()
+      }
+      return Disposables.create()
+    })
   }
 
   func get(path: String, parameters: [String: Any]? = nil, headers: [String : String]? = nil) -> Observable<JSON> {

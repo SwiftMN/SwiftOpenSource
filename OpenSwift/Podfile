@@ -13,6 +13,7 @@ target 'OpenSwift' do
 
   # Networking layer
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
   # Mobile Database
   pod 'RealmSwift'
@@ -30,4 +31,6 @@ target 'OpenSwift' do
   # RxSwift for Async
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxOptional'
+  pod 'RxSwiftExt'
 end

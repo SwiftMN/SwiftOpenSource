@@ -26,14 +26,13 @@ final class LandingViewController: UIViewController {
     super.viewDidLoad()
 
     bindings()
-  }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+    // OAuth with Spotify
     Authorize.shared.authorize(from: self)
   }
 
   private func bindings() {
+    // Why would we share?
     let artists = viewModel.topArtists.asObservable().share()
 
     // Bind Artists to UITableView
@@ -45,12 +44,15 @@ final class LandingViewController: UIViewController {
       }
       .disposed(by: disposableBag)
 
+    // How to combine different Observable types
     let indexPathObservable = tableView.rx.itemSelected.asObservable()
-
     Observable.combineLatest(indexPathObservable, artists) { indexPath, artists in
         return artists[indexPath.row]
-      }.subscribe(onNext: { artist in
-        print("selected artist \(artist.name)")
+      }.subscribe(onNext: { [weak self] artist in
+        if let vc = self?.storyboard?.instantiateViewController(ofType: ArtistDetailViewController.self) {
+          vc.artist = artist
+          self?.navigationController?.pushViewController(vc, animated: true)
+        }
       }).disposed(by: disposableBag)
 
     // Reuse Observables to perform other tasks. Such as logging.

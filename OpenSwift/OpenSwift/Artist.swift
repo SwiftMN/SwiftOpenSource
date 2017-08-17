@@ -14,6 +14,7 @@ final class Artist: Object, Mappable {
   dynamic var spotifyId = ""
   dynamic var popularity = 0
   dynamic var followers = 0
+  dynamic var imageString = ""
 
   required convenience init?(map: Map) {
     self.init()
@@ -24,5 +25,6 @@ final class Artist: Object, Mappable {
     popularity       <- map["popularity"]
     followers        <- map["followers"]["total"]
     spotifyId        <- map["id"]
+    imageString      <- map["images.1.url"]
   }
 }

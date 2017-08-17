@@ -15,8 +15,6 @@ enum Spotify {
   case authorize
   case token
   case topArtists
-  case topTracks
-  case playlists
   case artistTopTracks(String)
 
   var URLString: String {
@@ -27,10 +25,6 @@ enum Spotify {
       return "https://accounts.spotify.com/api/token"
     case .topArtists :
       return "https://api.spotify.com/v1/me/top/artists"
-    case .topTracks :
-      return "https://api.spotify.com/v1/me/top/tracks"
-    case .playlists :
-      return "https://api.spotify.com/v1/me/playlists"
     case .artistTopTracks(let id) :
       return "https://api.spotify.com/v1/artists/\(id)/top-tracks"
     }
@@ -44,10 +38,6 @@ enum Spotify {
       return URL(string: "https://accounts.spotify.com/api/token")!
     case .topArtists :
       return URL(string: "https://api.spotify.com/v1/me/top/artists")!
-    case .topTracks :
-      return URL(string: "https://api.spotify.com/v1/me/top/tracks")!
-    case .playlists :
-      return URL(string: "https://api.spotify.com/v1/me/playlists")!
     case .artistTopTracks(let id) :
       return URL(string: "https://api.spotify.com/v1/artists/\(id)/top-tracks")!
     }
@@ -60,5 +50,9 @@ final class SpotifyService {
 
   func fetchTopArtists() -> Observable<JSON> {
     return API.client.get(path: Spotify.topArtists.URLString)
+  }
+
+  func fetchArtistImage(url: String) -> Observable<UIImage> {
+    return API.client.download(path: url)
   }
 }

@@ -16,11 +16,12 @@
 		4326E8E81EB8DD560071D2D5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326E8E71EB8DD560071D2D5 /* API.swift */; };
 		433AEA281E9C527E009C4904 /* SpotifyAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AEA271E9C527E009C4904 /* SpotifyAccess.swift */; };
 		435C066D1F44EA6A00D742FD /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C066C1F44EA6A00D742FD /* ArtistTableViewCell.swift */; };
+		435C066F1F451E4F00D742FD /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C066E1F451E4F00D742FD /* ArtistDetailViewController.swift */; };
+		435C06711F451FA500D742FD /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C06701F451FA500D742FD /* UIStoryboard+Extensions.swift */; };
+		435C06731F45222400D742FD /* ArtistDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C06721F45222400D742FD /* ArtistDetailViewModel.swift */; };
 		4391EC981E9DC44C00CBF8C0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391EC971E9DC44C00CBF8C0 /* Artist.swift */; };
-		4391EC9A1E9DC51600CBF8C0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391EC991E9DC51600CBF8C0 /* Image.swift */; };
 		43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18DE1EB9149100ABA0AA /* Authorize.swift */; };
 		43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */; };
-		43FD18E31EBB6AF300ABA0AA /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18E21EBB6AF300ABA0AA /* Genre.swift */; };
 		43FE10B91E97143400386DFE /* secrets.yml in Resources */ = {isa = PBXBuildFile; fileRef = 43FE10B81E97143400386DFE /* secrets.yml */; };
 		43FE10BB1E97158000386DFE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BA1E97158000386DFE /* Log.swift */; };
 		43FE10BF1E9C257500386DFE /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE10BE1E9C257500386DFE /* LandingViewController.swift */; };
@@ -39,11 +40,12 @@
 		4326E8E71EB8DD560071D2D5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		433AEA271E9C527E009C4904 /* SpotifyAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyAccess.swift; sourceTree = "<group>"; };
 		435C066C1F44EA6A00D742FD /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		435C066E1F451E4F00D742FD /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
+		435C06701F451FA500D742FD /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		435C06721F45222400D742FD /* ArtistDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewModel.swift; sourceTree = "<group>"; };
 		4391EC971E9DC44C00CBF8C0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		4391EC991E9DC51600CBF8C0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		43FD18DE1EB9149100ABA0AA /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorize.swift; sourceTree = "<group>"; };
 		43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
-		43FD18E21EBB6AF300ABA0AA /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		43FE10B81E97143400386DFE /* secrets.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = secrets.yml; sourceTree = "<group>"; };
 		43FE10BA1E97158000386DFE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		43FE10BE1E9C257500386DFE /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +114,6 @@
 			children = (
 				433AEA271E9C527E009C4904 /* SpotifyAccess.swift */,
 				4391EC971E9DC44C00CBF8C0 /* Artist.swift */,
-				4391EC991E9DC51600CBF8C0 /* Image.swift */,
-				43FD18E21EBB6AF300ABA0AA /* Genre.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -130,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				43FE10BE1E9C257500386DFE /* LandingViewController.swift */,
+				435C066E1F451E4F00D742FD /* ArtistDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */,
+				435C06721F45222400D742FD /* ArtistDetailViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -167,6 +169,7 @@
 			children = (
 				43FD18DE1EB9149100ABA0AA /* Authorize.swift */,
 				435C066C1F44EA6A00D742FD /* ArtistTableViewCell.swift */,
+				435C06701F451FA500D742FD /* UIStoryboard+Extensions.swift */,
 			);
 			name = Random;
 			sourceTree = "<group>";
@@ -259,13 +262,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		30FB4C6415C85E6C7BB1CCB2 /* [CP] Embed Pods Frameworks */ = {
@@ -274,9 +280,38 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenSwift/Pods-OpenSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDrop/SwiftyDrop.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Yaml/Yaml.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDrop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yaml.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -305,18 +340,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4391EC9A1E9DC51600CBF8C0 /* Image.swift in Sources */,
 				4391EC981E9DC44C00CBF8C0 /* Artist.swift in Sources */,
 				433AEA281E9C527E009C4904 /* SpotifyAccess.swift in Sources */,
 				435C066D1F44EA6A00D742FD /* ArtistTableViewCell.swift in Sources */,
-				43FD18E31EBB6AF300ABA0AA /* Genre.swift in Sources */,
 				4326E8E41EB8DC9D0071D2D5 /* Extensions.swift in Sources */,
+				435C066F1F451E4F00D742FD /* ArtistDetailViewController.swift in Sources */,
 				4326E8E81EB8DD560071D2D5 /* API.swift in Sources */,
 				43FE10BB1E97158000386DFE /* Log.swift in Sources */,
 				43FE10BF1E9C257500386DFE /* LandingViewController.swift in Sources */,
 				4326E8E61EB8DCF90071D2D5 /* SpotifyService.swift in Sources */,
 				43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */,
+				435C06711F451FA500D742FD /* UIStoryboard+Extensions.swift in Sources */,
 				43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */,
+				435C06731F45222400D742FD /* ArtistDetailViewModel.swift in Sources */,
 				43250F461E96D69900CB2A89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
