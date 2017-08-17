@@ -105,7 +105,7 @@ final class ArtistDetailViewController: UIViewController {
     Observable.combineLatest(play, trackMp3Data) { tap, data  in
       return data
       }.observeOn(MainScheduler.instance)
-       .subscribe(onNext: { [weak self] data in
+       .subscribe(onNext: { data in
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         try! AVAudioSession.sharedInstance().setActive(true)
         guard self.player.isPlaying else { return }
