@@ -27,9 +27,9 @@ final class ArtistDetailViewModel {
   }
 
   private func bindings() {
-    let validArtist = artist.asObservable().filterNil()
-
-    validArtist.flatMap {
+    artist.asObservable()
+    .filterNil()
+    .flatMap {
       return self.service.fetchArtistImage(url: $0.imageString)
     }.subscribe(onNext: { [weak self] data in
       self?.image.value = data

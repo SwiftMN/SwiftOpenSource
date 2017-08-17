@@ -15,6 +15,8 @@ final class ArtistDetailViewController: UIViewController {
 
   //IBOutlets
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var followersLabel: UILabel!
+  @IBOutlet weak var popularityLabel: UILabel!
   
   // ViewModel
   private let viewModel = ArtistDetailViewModel(service: SpotifyService())
@@ -38,9 +40,28 @@ final class ArtistDetailViewController: UIViewController {
   }
 
   private func bindings() {
+
+    // drive is like subscribe, exception it's provided on the UI
     let image = viewModel.image
                          .asObservable()
                          .asDriver(onErrorJustReturn: nil)
     image.drive(imageView.rx.image).disposed(by: disposableBag)
+
+    // Need to update labels
+    let artist = viewModel.artist.asObservable().filterNil()
+
+    artist.map { $0.followers }
+          .filter { $0 > 0 }
+          .map { "\($0) Followers" }
+          .asDriver(onErrorJustReturn: "")
+          .drive(followersLabel.rx.text)
+          .disposed(by: disposableBag)
+
+    artist.map { $0.popularity }
+          .filter { $0 > 0 }
+          .map { "\($0) Popularity" }
+          .asDriver(onErrorJustReturn: "")
+          .drive(popularityLabel.rx.text)
+          .disposed(by: disposableBag)
   }
 }

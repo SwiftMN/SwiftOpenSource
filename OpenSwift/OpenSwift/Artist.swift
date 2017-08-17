@@ -23,7 +23,7 @@ final class Artist: Object, Mappable {
   func mapping(map: Map) {
     name             <- map["name"]
     popularity       <- map["popularity"]
-    followers        <- map["followers"]["total"]
+    followers        <- map["followers.total"]
     spotifyId        <- map["id"]
     imageString      <- map["images.1.url"]
   }

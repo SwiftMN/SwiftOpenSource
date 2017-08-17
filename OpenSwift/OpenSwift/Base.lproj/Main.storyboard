@@ -83,17 +83,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mm6-Gt-I0F">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-HZ-TlJ">
+                                <rect key="frame" x="20" y="40" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-0y-aOy">
+                                <rect key="frame" x="20" y="48" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mm6-Gt-I0F" secondAttribute="trailing" id="BeQ-Np-UpT"/>
                             <constraint firstItem="mm6-Gt-I0F" firstAttribute="top" secondItem="rc0-Ya-jJ4" secondAttribute="bottom" id="EFo-q7-9kW"/>
+                            <constraint firstItem="KTk-0y-aOy" firstAttribute="leading" secondItem="9gh-HZ-TlJ" secondAttribute="leading" id="Tvf-XQ-di5"/>
                             <constraint firstItem="mm6-Gt-I0F" firstAttribute="leading" secondItem="aB9-0M-Bgp" secondAttribute="leading" id="Wjz-r5-s8z"/>
+                            <constraint firstItem="9gh-HZ-TlJ" firstAttribute="leading" secondItem="aB9-0M-Bgp" secondAttribute="leading" constant="20" id="bmT-od-Snr"/>
+                            <constraint firstItem="KTk-0y-aOy" firstAttribute="top" secondItem="9gh-HZ-TlJ" secondAttribute="bottom" constant="8" id="cMK-Xe-3x2"/>
+                            <constraint firstItem="9gh-HZ-TlJ" firstAttribute="top" secondItem="rc0-Ya-jJ4" secondAttribute="bottom" constant="20" id="iP5-rx-THD"/>
                             <constraint firstItem="KYC-91-6vg" firstAttribute="top" secondItem="mm6-Gt-I0F" secondAttribute="bottom" id="xOD-eB-Ctp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="followersLabel" destination="9gh-HZ-TlJ" id="kaa-ax-qCn"/>
                         <outlet property="imageView" destination="mm6-Gt-I0F" id="KP8-p5-WU9"/>
+                        <outlet property="popularityLabel" destination="KTk-0y-aOy" id="T7v-EM-bpq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVq-Nm-Kes" userLabel="First Responder" sceneMemberID="firstResponder"/>
