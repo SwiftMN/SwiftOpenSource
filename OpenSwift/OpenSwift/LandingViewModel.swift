@@ -10,17 +10,39 @@ import RxSwift
 
 final class LandingViewModel {
   private let disposableBag = DisposeBag()
-  private let service = SpotifyService()
+  private let service: SpotifyService
 
-  // Observable
+  // Output
   private(set) var topArtists = Variable<[Artist]>([])
 
-  init() {
-    API.client.authorized.asObservable()
+  init(service: SpotifyService) {
+    self.service = service
+
+    bindings()
+  }
+
+  private func bindings() {
+    let authorized = API.client
+      .authorized
+      .asObservable()
       .filter { $0 == true }
-      .subscribe(onNext: { [weak self] _ in
-        // API has been authorized. Can request stuff
-        self?.service.fetchTopArtists()
+
+    let artists = authorized.flatMap { _ in
+      return self.service.fetchTopArtists()
+    }
+
+    artists.subscribe(onNext: { json in
+      let artists = json["items"].arrayValue
+      var tempArtists = [Artist]()
+      for artistJSON in artists {
+        if let jsonDictionary = artistJSON.dictionaryObject, let parsedArtist = Artist(JSON: jsonDictionary) {
+          tempArtists.append(parsedArtist)
+        }
+      }
+
+      if tempArtists.count > 0 {
+        self.topArtists.value = tempArtists
+      }
     }).addDisposableTo(disposableBag)
   }
 }
