@@ -77,6 +77,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SC7-xB-cLK">
+                                <rect key="frame" x="127.5" y="86" width="120" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R9k-pW-PCy"/>
+                                    <constraint firstAttribute="width" constant="120" id="tYe-I1-YdW"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="°C"/>
+                                    <segment title="°F"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039220000001" green="0.72549019609999998" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -84,6 +96,7 @@
                             <constraint firstItem="NfB-U8-BvJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0BU-6I-9Gf"/>
                             <constraint firstItem="M5v-QZ-dAs" firstAttribute="trailing" secondItem="NfB-U8-BvJ" secondAttribute="trailing" id="17I-4H-8uh"/>
                             <constraint firstItem="NfB-U8-BvJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="BWQ-Ad-lYA"/>
+                            <constraint firstItem="SC7-xB-cLK" firstAttribute="centerX" secondItem="NfB-U8-BvJ" secondAttribute="centerX" id="BeB-TA-nHj"/>
                             <constraint firstAttribute="trailing" secondItem="Ny2-UI-evh" secondAttribute="trailing" constant="20" id="F18-QV-iTX"/>
                             <constraint firstItem="M5v-QZ-dAs" firstAttribute="top" secondItem="NfB-U8-BvJ" secondAttribute="bottom" constant="8" id="G33-cu-oqC"/>
                             <constraint firstItem="cr4-gf-mzR" firstAttribute="top" secondItem="Ny2-UI-evh" secondAttribute="bottom" constant="16.5" id="IRQ-0X-cSC"/>
@@ -92,6 +105,7 @@
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="Nls-yO-2tw"/>
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="top" secondItem="lqc-PM-gTF" secondAttribute="bottom" constant="8" id="Xmq-sN-KZE"/>
                             <constraint firstItem="vfY-dB-CLQ" firstAttribute="leading" secondItem="cr4-gf-mzR" secondAttribute="leading" id="Ye8-2D-tEl"/>
+                            <constraint firstItem="SC7-xB-cLK" firstAttribute="top" secondItem="NfB-U8-BvJ" secondAttribute="bottom" constant="18" id="Yto-s8-FiT"/>
                             <constraint firstItem="u0o-ti-Pg5" firstAttribute="trailing" secondItem="Ny2-UI-evh" secondAttribute="trailing" id="fyJ-g4-rza"/>
                             <constraint firstItem="Ny2-UI-evh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="iLc-i3-AGf"/>
                             <constraint firstItem="cr4-gf-mzR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="iem-JL-f52"/>
@@ -107,6 +121,7 @@
                         <outlet property="cityNameTextField" destination="NfB-U8-BvJ" id="Hee-ll-wWx"/>
                         <outlet property="humidityLabel" destination="u0o-ti-Pg5" id="fLq-Pm-QbA"/>
                         <outlet property="temperatureLabel" destination="lqc-PM-gTF" id="YYC-Gs-Ql6"/>
+                        <outlet property="temperatureSegmentedControl" destination="SC7-xB-cLK" id="nxr-h3-qcK"/>
                         <outlet property="weatherDescriptionLabel" destination="vfY-dB-CLQ" id="om9-kS-mkG"/>
                         <outlet property="weatherIconLabel" destination="Ny2-UI-evh" id="GBK-6f-a6R"/>
                     </connections>
