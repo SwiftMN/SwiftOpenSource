@@ -18,6 +18,7 @@ final class ArtistDetailViewModel {
   
   // Outputs
   private(set) var image = Variable<UIImage?>(nil)
+  private(set) var sampleTrack = Variable<Track?>(nil)
 
   // Dependency Injection
   init(service: SpotifyService) {
@@ -34,5 +35,24 @@ final class ArtistDetailViewModel {
     }.subscribe(onNext: { [weak self] data in
       self?.image.value = data
     }).disposed(by: disposableBag)
+
+    artist.asObservable()
+      .filterNil().flatMap {
+        return self.service.fetchTopTracks(artistID: $0.spotifyId)
+      }.map { json -> Track? in
+        let tracks = json["tracks"].arrayValue
+        for tracksJSON in tracks {
+          if let jsonDictionary = tracksJSON.dictionaryObject, let track = Track(JSON: jsonDictionary) {
+            return track
+          }
+        }
+
+        return nil
+      }.filterNil()
+       .flatMap {
+        return self.service.fetchMp3Preview(track: $0)
+      }.subscribe(onNext: { track in
+        self.sampleTrack.value = track
+      }).disposed(by: disposableBag)
   }
 }

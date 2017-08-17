@@ -95,11 +95,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0Z-z3-tsX">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKk-A8-Rmo">
+                                        <rect key="frame" x="8" y="8" width="359" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOm-Wx-cZN">
+                                        <rect key="frame" x="156.5" y="51" width="61" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" red="0.24141666293144226" green="0.42434167861938477" blue="0.72319298982620239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aKk-A8-Rmo" firstAttribute="leading" secondItem="Q0Z-z3-tsX" secondAttribute="leading" constant="8" id="Lyx-75-3eI"/>
+                                    <constraint firstItem="pOm-Wx-cZN" firstAttribute="centerY" secondItem="Q0Z-z3-tsX" secondAttribute="centerY" id="XDY-z4-bYn"/>
+                                    <constraint firstAttribute="height" constant="150" id="Yag-dk-pba"/>
+                                    <constraint firstItem="aKk-A8-Rmo" firstAttribute="top" secondItem="Q0Z-z3-tsX" secondAttribute="top" constant="8" id="iQa-FA-9xw"/>
+                                    <constraint firstAttribute="trailing" secondItem="aKk-A8-Rmo" secondAttribute="trailing" constant="8" id="u6c-24-Xl5"/>
+                                    <constraint firstItem="pOm-Wx-cZN" firstAttribute="centerX" secondItem="Q0Z-z3-tsX" secondAttribute="centerX" id="yih-83-FEa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mm6-Gt-I0F" secondAttribute="trailing" id="BeQ-Np-UpT"/>
                             <constraint firstItem="mm6-Gt-I0F" firstAttribute="top" secondItem="rc0-Ya-jJ4" secondAttribute="bottom" id="EFo-q7-9kW"/>
+                            <constraint firstItem="KYC-91-6vg" firstAttribute="top" secondItem="Q0Z-z3-tsX" secondAttribute="bottom" id="FNX-gs-bhe"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0Z-z3-tsX" secondAttribute="trailing" id="G0u-yD-eqM"/>
+                            <constraint firstItem="Q0Z-z3-tsX" firstAttribute="leading" secondItem="aB9-0M-Bgp" secondAttribute="leading" id="LpD-xP-XJ8"/>
                             <constraint firstItem="KTk-0y-aOy" firstAttribute="leading" secondItem="9gh-HZ-TlJ" secondAttribute="leading" id="Tvf-XQ-di5"/>
                             <constraint firstItem="mm6-Gt-I0F" firstAttribute="leading" secondItem="aB9-0M-Bgp" secondAttribute="leading" id="Wjz-r5-s8z"/>
                             <constraint firstItem="9gh-HZ-TlJ" firstAttribute="leading" secondItem="aB9-0M-Bgp" secondAttribute="leading" constant="20" id="bmT-od-Snr"/>
@@ -111,7 +141,10 @@
                     <connections>
                         <outlet property="followersLabel" destination="9gh-HZ-TlJ" id="kaa-ax-qCn"/>
                         <outlet property="imageView" destination="mm6-Gt-I0F" id="KP8-p5-WU9"/>
+                        <outlet property="playTrack" destination="pOm-Wx-cZN" id="AFF-9i-A9n"/>
+                        <outlet property="playerViewContainer" destination="Q0Z-z3-tsX" id="aef-jq-LJm"/>
                         <outlet property="popularityLabel" destination="KTk-0y-aOy" id="T7v-EM-bpq"/>
+                        <outlet property="trackNameLabel" destination="aKk-A8-Rmo" id="oTD-vs-PN2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVq-Nm-Kes" userLabel="First Responder" sceneMemberID="firstResponder"/>

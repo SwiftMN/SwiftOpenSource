@@ -19,6 +19,7 @@
 		435C066F1F451E4F00D742FD /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C066E1F451E4F00D742FD /* ArtistDetailViewController.swift */; };
 		435C06711F451FA500D742FD /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C06701F451FA500D742FD /* UIStoryboard+Extensions.swift */; };
 		435C06731F45222400D742FD /* ArtistDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C06721F45222400D742FD /* ArtistDetailViewModel.swift */; };
+		435C06751F453BA600D742FD /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C06741F453BA600D742FD /* Track.swift */; };
 		4391EC981E9DC44C00CBF8C0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4391EC971E9DC44C00CBF8C0 /* Artist.swift */; };
 		43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18DE1EB9149100ABA0AA /* Authorize.swift */; };
 		43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */; };
@@ -43,6 +44,7 @@
 		435C066E1F451E4F00D742FD /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		435C06701F451FA500D742FD /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		435C06721F45222400D742FD /* ArtistDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewModel.swift; sourceTree = "<group>"; };
+		435C06741F453BA600D742FD /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		4391EC971E9DC44C00CBF8C0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		43FD18DE1EB9149100ABA0AA /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorize.swift; sourceTree = "<group>"; };
 		43FD18E01EB976F800ABA0AA /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				433AEA271E9C527E009C4904 /* SpotifyAccess.swift */,
 				4391EC971E9DC44C00CBF8C0 /* Artist.swift */,
+				435C06741F453BA600D742FD /* Track.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				4326E8E61EB8DCF90071D2D5 /* SpotifyService.swift in Sources */,
 				43FD18DF1EB9149100ABA0AA /* Authorize.swift in Sources */,
 				435C06711F451FA500D742FD /* UIStoryboard+Extensions.swift in Sources */,
+				435C06751F453BA600D742FD /* Track.swift in Sources */,
 				43FD18E11EB976F800ABA0AA /* LandingViewModel.swift in Sources */,
 				435C06731F45222400D742FD /* ArtistDetailViewModel.swift in Sources */,
 				43250F461E96D69900CB2A89 /* AppDelegate.swift in Sources */,

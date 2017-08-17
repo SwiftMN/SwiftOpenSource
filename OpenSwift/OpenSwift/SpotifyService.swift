@@ -26,7 +26,7 @@ enum Spotify {
     case .topArtists :
       return "https://api.spotify.com/v1/me/top/artists"
     case .artistTopTracks(let id) :
-      return "https://api.spotify.com/v1/artists/\(id)/top-tracks"
+      return "https://api.spotify.com/v1/artists/\(id)/top-tracks?country=US"
     }
   }
 
@@ -39,7 +39,7 @@ enum Spotify {
     case .topArtists :
       return URL(string: "https://api.spotify.com/v1/me/top/artists")!
     case .artistTopTracks(let id) :
-      return URL(string: "https://api.spotify.com/v1/artists/\(id)/top-tracks")!
+      return URL(string: "https://api.spotify.com/v1/artists/\(id)/top-tracks?country=US")!
     }
   }
 }
@@ -54,5 +54,18 @@ final class SpotifyService {
 
   func fetchArtistImage(url: String) -> Observable<UIImage> {
     return API.client.download(path: url)
+  }
+
+  func fetchTopTracks(artistID: String) -> Observable<JSON> {
+    return API.client.get(path: Spotify.artistTopTracks(artistID).URLString)
+  }
+
+  func fetchMp3Preview(track: Track) -> Observable<Track> {
+    return API.client.data(path: track.previewString).map { dataPath  in
+      let url = URL(fileURLWithPath: dataPath)
+      let data = try? Data(contentsOf: url)
+      track.mp3Data = data
+      return track
+    }
   }
 }

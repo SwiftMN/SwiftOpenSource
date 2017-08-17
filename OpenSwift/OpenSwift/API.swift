@@ -29,6 +29,31 @@ final class API {
     authorized.value = true
   }
 
+  func data(path: String) -> Observable<String> {
+    return Observable.create { observer in
+      let destination: DownloadRequest.DownloadFileDestination = { _ , _ in
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL = documentsURL.appendingPathComponent("sample.mp3")
+        return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+      }
+
+      Alamofire.download(path, to: destination).response { response in
+        print(response)
+
+        if let error = response.error {
+          observer.onError(error)
+        }
+
+        if let dataPath = response.destinationURL?.path {
+          observer.onNext(dataPath)
+        }
+
+        observer.onCompleted()
+      }
+      return Disposables.create()
+    }
+  }
+
   func download(path: String, parameters: [String: Any]? = nil, headers: [String : String]? = nil) -> Observable<UIImage> {
     return Observable.create({ observer in
       Alamofire.request(path).responseImage { responseImage in
